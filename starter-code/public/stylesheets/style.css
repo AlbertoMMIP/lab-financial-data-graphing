@@ -6,3 +6,13 @@ body {
 a {
   color: #00B7FF;
 }
+
+.info-box{
+  margin: 10px 0px;
+  border: .1em solid blue;
+  width: 600px;
+}
+
+.info-box label{
+  padding: 5% 10%;
+}

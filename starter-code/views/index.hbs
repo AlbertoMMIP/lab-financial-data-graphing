@@ -5,11 +5,30 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>{{title}}</h1>
-    <p>Welcome to {{title}}</p>
-    FROM: <input type="date">
-    TO: <input type="date">
-    <canvas id="myChart" ></canvas>
+    <h1>PP - PT2MEX - Financial data graphing</h1>
+
+    <form id="formDates">
+      <label for="from">From:</label>
+      <input type="date" name="from" id="from" autofocus required>
+      <label for="to">To:</label>
+      <input type="date" name="to" id="to" required>
+      <button type="submit">Apply</button>
+    </form>
+    <br>
+    <label for="curr">Currency:</label>
+    <select type="text" name="curr" id="curr">
+      <option value="" selected disabled>Select a currency</option>
+      <option value="USD">US Dollars</option>
+      <option value="EUR">Euro</option>
+      <option value="MXN">Mexican Pesos</option>
+    </select>
+    <div class="info-box">
+      <h2>Information box</h2>
+      <label for="" id="minValue">Min Value: 0</label>
+      <label for="" id="maxValue">Max Value: 0</label>
+    </div>
+    <canvas id="chart"></canvas>
+
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
